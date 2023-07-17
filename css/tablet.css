@@ -1,0 +1,538 @@
+/* Thiết lập chung */
+* {
+  margin: 0px;
+  font-family: ArialMT, Arial, sans-serif;
+}
+
+.bg-grey {
+  background: #f7f7f7;
+}
+
+/* Không hiển thị thiết lập dành cho Mobile, Laptop */
+.banner-mobile {
+  display: none;
+}
+.banner-laptop {
+  display: none;
+}
+
+/* Thiết lập mục banner Tablet với flex */
+
+.banner-tablet {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.bannertext-tablet {
+  position: absolute;
+  text-align: center;
+}
+
+/* Không hiển thị navbar cho Mobile */
+.topnav-mobile {
+  display: none;
+}
+/* Dùng Grid cho thanh Navbar */
+.topnav {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  align-items: center;
+}
+
+.item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border: 0.5px solid rgb(224, 224, 224);
+}
+
+/* Dùng media ẩn hình profile khi chuyển sang giao diện tablet */
+@media (max-width: 1023px) {
+  .hidden-on-tablet {
+    display: none;
+  }
+}
+
+/* Thiết lập cho các ô chữ nhật của thanh Nav bar */
+.rectangle {
+  height: 100px;
+}
+
+/* Sử dụng javascript để tạo hiệu ứng di chuột phóng đại và đổi màu đoạn text */
+.rectangle a {
+  float: center;
+  color: black;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  transition: all 0.3s; /* Thêm hiệu ứng chuyển đổi khi hover */
+}
+
+.rectangle a:hover {
+  background-color: rgb(10, 222, 24);
+  color: rgb(231, 14, 2);
+  transform: scale(1.2); /* Phóng to ô a lên gấp 120% */
+  font-size: 120%; /* Tăng kích thước chữ lên 120% */
+}
+/* Không hiển thị info dành cho mobile, laptop */
+.info-mobile {
+  display: none;
+}
+.info-laptop {
+  display: none;
+}
+/* Sử dụng Grid cho mục thông tin chung */
+.info-tablet {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 30px 30px;
+}
+.header-target-tablet {
+  padding: 20px;
+  border: 0.1px solid rgba(220, 216, 216, 0.942);
+}
+.header-info-tablet {
+  padding: 20px;
+  border: 0.1px solid rgba(220, 216, 216, 0.942);
+  background-color: rgba(240, 232, 232, 0.943);
+}
+
+.personal-info-tablet {
+  padding-top: 30px;
+  padding-left: 10px;
+  row-gap: 20px;
+}
+/* Căn lề mục list trong thông tin cá nhân */
+.personal-info-list-tablet {
+  margin-left: -40px;
+  padding-bottom: 30px;
+}
+/* Không hiển thị section experience của website Mobile */
+.experience-mobile {
+  display: none;
+}
+.experience-laptop {
+  display: none;
+}
+/* Thiết lập mục thông tin nghề nghiệp chi tiết trên website màn hình trung bình */
+/* Sử dụng lưới grid cho mục thông tin chi tiết */
+.experience {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto 5px auto 5px auto 5px;
+  column-gap: 20px;
+  row-gap: 10px;
+  margin: 40px;
+}
+.kn {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: 90px auto;
+  justify-items: flex-start; /* Căn trái các phần tử con */
+  align-items: flex-end; /* Căn dưới các phần tử con */
+  column-gap: 20px;
+  row-gap: 20px;
+  border: 0.5px solid black;
+  margin-top: 20px;
+}
+.kn-kn {
+  grid-column: 1/2;
+  grid-row: 1/4;
+  border: 0.5px solid grey;
+}
+.kn-hd {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  border: 0.5px solid grey;
+}
+.kn-hv {
+  grid-column: 2/3;
+  grid-row: 2/6;
+  border: 0.5px solid grey;
+}
+.kn-sk {
+  grid-column: 1/2;
+  grid-row: 4/8;
+  border: 0.5px solid grey;
+}
+.kn-st {
+  grid-column: 2/3;
+  grid-row: 6/10;
+  border: 0.5px solid grey;
+}
+.kn-nn {
+  grid-column: 1/2;
+  grid-row: 8/11;
+  border: 0.5px solid grey;
+}
+/* Chỉnh vị trí đoạn text và icon */
+.kn-header {
+  display: flex;
+  justify-content: flex-start; /* Căn trái nội dung */
+  padding-left: 30px;
+}
+.kn-text {
+  margin-bottom: 0; /* Loại bỏ margin dưới của đoạn text */
+}
+.kn-icon-text {
+  font-size: 48px;
+  text-align: right;
+  vertical-align: top;
+  margin-bottom: 20px;
+}
+/* Thiết lập ẩn nội dung chi tiết mục thông tin nghề nghiệp */
+.grid-item {
+  position: relative; /* Thêm thuộc tính position: relative; */
+}
+.hidden-row {
+  display: none;
+}
+
+.view-button {
+  display: none; /* Ẩn nút View More/View Less ban đầu */
+  position: absolute;
+  top: 80%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  margin: 5px auto;
+  padding: 10px 20px;
+  background-color: rgb(226, 226, 103);
+  color: black;
+  font-size: 14px;
+  text-decoration: none;
+  text-align: center;
+  width: 150px;
+  height: 40px;
+  border-radius: 20px;
+  z-index: 1; /* Đặt z-index để nút hiển thị trên các ô khác */
+}
+.grid-item:hover .view-button {
+  display: block; /* Hiển thị nút khi hover chuột vào ô */
+}
+/* Thiết lập chung cho phần nội dung chi tiết phần kinh nghiệm */
+.kn3 {
+  grid-column: 1 / span 2;
+  margin: 30px;
+  align-self: start;
+  line-height: 2rem;
+  padding-bottom: 40px;
+}
+
+/* Tạo dấu chấm xanh trong các mục list */
+.blue-dot {
+  list-style-type: none;
+  padding-left: 20px;
+}
+.blue-dot li {
+  position: relative;
+  margin-left: -20px;
+  padding-left: 40px;
+  margin-bottom: 0px;
+}
+.blue-dot li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: rgb(71, 142, 218);
+}
+/* Thiết lập cho phần kinh nghiệm chi tiết màn hình tablet */
+.kn-content-tablet {
+  padding-left: 20px;
+  line-height: 1.2rem;
+}
+
+/* Thiết lập cho mục from-to có ô màu xanh "Hiện tại" */
+.hientai {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 30px;
+  margin-bottom: 20px;
+}
+.hientai-p {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  height: 30px;
+}
+.hientai-btn {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  width: 100px;
+  height: 30px;
+  border-radius: 30%;
+  background-color: rgb(53, 184, 193);
+}
+/* Thiết lập vị trí các ô trong mục sở thích */
+
+.sothich-content-tablet {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+  padding: 20px;
+  row-gap: 20px;
+  column-gap: 20px;
+}
+.icon-hobby {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.iconborder {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  border: 0.5px solid rgb(17, 172, 38);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 30px;
+  color: blue;
+}
+.iconborder p {
+  margin: 0;
+  font-size: 30px;
+  line-height: 50px;
+}
+/* Thiết lập cho đoạn text dưới icon sở thích */
+.text-icon {
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.nn {
+  background: #199cdb;
+  display: inline-block;
+  height: 2px;
+  margin-right: 10px;
+  margin-bottom: 25px;
+  width: 45px;
+}
+.nn2 {
+  background: grey;
+  display: inline-block;
+  height: 2px;
+  margin-right: 10px;
+  margin-bottom: 25px;
+  width: 45px;
+}
+.cc-laptop {
+  display: none;
+}
+.cc-mobile {
+  display: none;
+}
+
+/* Thiết lập section chứng chỉ cho website tablet */
+#cc-tablet {
+  display: grid;
+  grid-template-columns: 1fr 10px 1fr;
+  grid-template-rows: auto 1fr 1fr 10px 1fr 1fr;
+  align-items: center;
+  padding: 10px;
+  row-gap: 20px;
+  column-gap: 10px;
+}
+#cert1-tablet {
+  grid-column: 1 / 4;
+  grid-row: 1/2;
+  padding-left: 30px;
+  align-self: start;
+}
+#cert2-tablet {
+  grid-column: 1 / 2;
+  grid-row: 2/3;
+  padding-left: 30px;
+  align-self: start;
+}
+#cert3-tablet {
+  grid-column: 1/2;
+  grid-row: 3/4;
+  padding-left: 30px;
+}
+#cert9-tablet {
+  grid-column: 2 / span 1;
+  grid-row: 2 / span 2;
+  border-right: 0.5px solid #d6c08d;
+  height: 100%;
+}
+#cert4-tablet {
+  grid-column: 3/4;
+  grid-row: 2/3;
+  padding-left: 10px;
+  padding-right: 20px;
+}
+#cert5-tablet {
+  grid-column: 3/4;
+  grid-row: 3/4;
+  padding-left: 10px;
+  padding-right: 20px;
+}
+#cert6-tablet {
+  grid-column: 1 / 4;
+  grid-row: 4/5;
+  border-top: 0.5px solid #d6c08d;
+  height: 10px;
+}
+#cert7-tablet {
+  grid-column: 1 / 2;
+  grid-row: 5/6;
+  padding-left: 30px;
+}
+#cert8-tablet {
+  grid-column: 1/2;
+  grid-row: 6/7;
+  padding-left: 30px;
+}
+
+/* Ẩn các ô <div> dự án cho website laptop, mobile */
+
+.project-laptop {
+  display: none;
+}
+.project-mobile {
+  display: none;
+}
+/* Thiết lập thông tin chi tiết dự án cho website Tablet */
+
+.da-1-tablet {
+  padding: 30px;
+  align-self: center;
+}
+
+.duan-tablet {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 20px 30px;
+  row-gap: 20px;
+  column-gap: 20px;
+}
+
+.da-tablet {
+  border: 0.5px solid grey;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-auto-rows: max-content;
+  align-items: center;
+}
+.da-2-tablet {
+  grid-column: 1 / span 4;
+}
+
+.da-3-tablet {
+  grid-column: 1 / span 4;
+  align-self: start;
+  border-bottom: 0.5px solid grey;
+  background-color: rgb(225, 216, 216);
+  padding: 10px 20px;
+}
+.da-3-tablet h2 {
+  font-size: 18px;
+}
+.da-4-tablet {
+  grid-column: 1/2;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.da-4border-tablet {
+  display: grid;
+  width: 70px;
+  height: 30px;
+  border-radius: 25%;
+  border: 0.5px solid blue;
+  place-items: center;
+  background-color: rgb(197, 230, 203);
+}
+
+.da-5-tablet {
+  grid-column: 2/5;
+  grid-row: 3/4;
+  display: flex;
+}
+.da-6-tablet {
+  grid-column: 2/5;
+  grid-row: 4/5;
+  display: flex;
+}
+.da-border-1-tablet {
+  grid-column: 1 / 5;
+  border-bottom: 0.5px solid grey;
+}
+.da-7-tablet {
+  grid-column: 1/2;
+  grid-row: 6/7;
+  padding-top: 10px;
+}
+.da-8-tablet {
+  grid-column: 2 / 5;
+  grid-row: 6/8;
+  padding-top: 10px;
+}
+.da-border-2-tablet {
+  grid-column: 1 / span 4;
+  border-bottom: 0.5px solid grey;
+}
+.da-9-tablet {
+  grid-column: 1/2;
+  grid-row: 9/10;
+  padding-top: 10px;
+}
+.da-10-tablet {
+  grid-column: 2 / 5;
+  grid-row: 9/11;
+  padding-top: 10px;
+}
+.da-border-3-tablet {
+  grid-column: 1 / span 4;
+  border-bottom: 0.5px solid grey;
+}
+.da-11-tablet {
+  grid-column: 1/2;
+  grid-row: 12/13;
+  padding-top: 10px;
+}
+.da-12-tablet {
+  grid-column: 2 / 5;
+  grid-row: 12/14;
+  padding-top: 10px;
+}
+/* Nút bấm đến website dự án chi tiết */
+.da-more {
+  display: flex;
+  justify-content: center;
+}
+.da-more .btn {
+  background-color: #28a745;
+  color: white;
+  border-radius: 5px;
+  font-size: 16px;
+}
+/* Không hiển thị thiết lập social trên màn hình mobile */
+.social-mobile {
+  display: none;
+}
+/* Thiết lập cho mục social, sử dụng flex */
+.social {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding: 30px 60px;
+  font-size: 18px;
+  color: grey;
+  width: 100%;
+}

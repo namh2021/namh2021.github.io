@@ -1,0 +1,504 @@
+/* Thiết lập chung */
+* {
+  margin: 0px;
+  font-family: ArialMT, Arial, sans-serif;
+}
+
+.bg-grey {
+  background: #f7f7f7;
+}
+
+/* Không hiển thị banner dành cho Tablet, Mobile */
+.banner-mobile {
+  display: none;
+}
+.banner-tablet {
+  display: none;
+}
+
+/* Thiết lập banner dành cho web màn hình lớn */
+.banner-laptop {
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+.bannertext-laptop {
+  position: absolute;
+  top: 33.3%;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+/* Ẩn section navbar dành cho mobile*/
+.topnav-mobile {
+  display: none;
+}
+
+/* Thiết lập cho section navbar dành cho tablet, laptop */
+.topnav {
+  display: grid;
+  grid-template-columns: 1fr 1fr 100px 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border: 0.5px solid rgb(224, 224, 224);
+  margin-top: 0;
+}
+.item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border: 0.5px solid rgb(224, 224, 224);
+}
+#lylich {
+  justify-content: left;
+}
+#chungchi {
+  justify-content: right;
+}
+/* Thiết lập cho các ô chữ nhật của thanh Nav bar */
+/* Thiết lập cho hình ảnh profile */
+
+.image-profile {
+  grid-template-columns: 3/4;
+}
+.image-profile img {
+  position: absolute;
+  border-radius: 50%;
+  width: 180px;
+  border: 15px solid white;
+}
+/* Thiết lập cho các ô chữ nhật của thanh Nav bar */
+.rectangle {
+  height: 100px;
+}
+.innercircle img {
+  width: 200px;
+  height: 200px;
+}
+
+/* Sử dụng javascript để tạo hiệu ứng di chuột phóng đại và đổi màu đoạn text */
+.rectangle a {
+  float: center;
+  color: black;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  transition: all 0.3s; /* Thêm hiệu ứng chuyển đổi khi hover */
+}
+
+.rectangle a:hover {
+  background-color: rgb(10, 222, 24);
+  color: rgb(231, 14, 2);
+  transform: scale(1.2); /* Phóng to ô a lên gấp 120% */
+  font-size: 120%; /* Tăng kích thước chữ lên 120% */
+}
+
+/* Không hiển thị info dành cho mobile */
+.info-mobile {
+  display: none;
+}
+.info-tablet {
+  display: none;
+}
+/* Thiết lập mục thông tin chung cho màn hình laptop */
+.info-laptop {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border: 0.1px solid rgba(220, 216, 216, 0.942);
+}
+.target-laptop {
+  padding-right: 20px;
+  padding-top: 30px;
+  padding-left: 40%;
+}
+.target-laptop h1 {
+  font-size: 30px;
+}
+.target-content-laptop {
+  padding-top: 30px;
+}
+
+.personal-laptop {
+  padding-top: 30px;
+  padding-left: 40px;
+  row-gap: 20px;
+  background-color: #efe9e9ee;
+}
+.personal-laptop h1 {
+  font-size: 30px;
+}
+.personal-info {
+  padding-top: 30px;
+  padding-left: 10px;
+  row-gap: 20px;
+  background-color: #efe9e9ee;
+}
+/* Căn lề mục list trong thông tin cá nhân */
+.personal-info-list {
+  margin-left: -40px;
+  padding-bottom: 30px;
+}
+/* Ẩn mục thông tin nghề nghiệp màn hình tablet, mobile */
+.experience {
+  display: none;
+}
+.experience-mobile {
+  display: none;
+}
+/* Thiết lập mục thông tin nghề nghiệp cho màn hình lớn */
+.experience-laptop {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 20px 50px;
+  row-gap: 40px;
+  column-gap: 30px;
+  margin: 20px;
+}
+/* Xác định vị trí các ô thông tin trong lưới grid */
+.kn-kn-laptop {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  border: 0.5px solid grey;
+}
+.kn-hd-laptop {
+  grid-column: 3/4;
+  grid-row: 1/2;
+  border: 0.5px solid grey;
+}
+.kn-hv-laptop {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  border: 0.5px solid grey;
+}
+.kn-sk-laptop {
+  grid-column: 3/4;
+  grid-row: 2/3;
+  border: 0.5px solid grey;
+}
+.kn-st-laptop {
+  grid-column: 1/2;
+  grid-row: 2/3;
+  border: 0.5px solid grey;
+}
+.kn-nn-laptop {
+  grid-column: 2/3;
+  grid-row: 2/3;
+  border: 0.5px solid grey;
+}
+/* Chỉnh vị trí đoạn header và icon */
+.kn-laptop {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: 120px auto;
+  align-items: center;
+  padding: 20px;
+  column-gap: 20px;
+  row-gap: 20px;
+  border: 0.5px solid black;
+}
+.kn-header-laptop {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Căn trái nội dung */
+  padding-left: 30px;
+}
+/* Thiết lập ẩn nội dung chi tiết mục thông tin nghề nghiệp */
+.grid-item {
+  position: relative; /* Thêm thuộc tính position: relative; */
+}
+.hidden-row {
+  display: none;
+}
+
+.view-button {
+  display: none; /* Ẩn nút View More/View Less ban đầu */
+  position: absolute;
+  top: 80%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  margin: 5px auto;
+  padding: 10px 20px;
+  background-color: rgb(226, 226, 103);
+  color: black;
+  font-size: 14px;
+  text-decoration: none;
+  text-align: center;
+  width: 150px;
+  height: 40px;
+  border-radius: 20px;
+  z-index: 1; /* Đặt z-index để nút hiển thị trên các ô khác */
+}
+.grid-item:hover .view-button {
+  display: block; /* Hiển thị nút khi hover chuột vào ô */
+}
+.kn-text-laptop {
+  margin-bottom: 0;
+}
+.kn-icon-text-laptop {
+  font-size: 48px;
+  text-align: right;
+  vertical-align: top;
+  margin-bottom: 20px;
+}
+/* Thiết lập chung cho phần nội dung chi tiết phần kinh nghiệm */
+.kn3-laptop {
+  grid-column: 1 / span 2;
+  margin: 30px;
+  align-self: start;
+  line-height: 2rem;
+  padding-bottom: 40px;
+}
+/* Thiết lập cho mục from-to có ô màu xanh "Hiện tại" */
+.hientai {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 30px;
+  margin-bottom: 20px;
+}
+.hientai-p {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  height: 30px;
+}
+.hientai-btn {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  width: 100px;
+  height: 30px;
+  border-radius: 30%;
+  background-color: rgb(53, 184, 193);
+}
+/* Thiết lập vị trí các icon trong mục sở thích */
+
+.sothich-content-laptop {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin-left: -10px;
+  justify-items: center;
+  overflow: hidden;
+}
+.icon-hobby {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* Thiết lập border của các icon */
+.iconborder-laptop {
+  display: grid;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 0.5px solid rgb(17, 172, 38);
+  place-items: center;
+  font-size: 20px;
+  color: blue;
+}
+.iconborder-laptop p {
+  margin: 0;
+  font-size: 20px;
+  text-align: center;
+  line-height: 50px;
+}
+/* Thiết lập cho đoạn text dưới icon sở thích, ngôn ngữ */
+.text-icon-laptop {
+  text-align: center;
+  white-space: nowrap;
+}
+
+.nn-laptop {
+  background: #199cdb;
+  display: inline-block;
+  height: 2px;
+  margin-right: 10px;
+  margin-bottom: 25px;
+  width: 45px;
+}
+.nn2-laptop {
+  background: grey;
+  display: inline-block;
+  height: 2px;
+  margin-right: 10px;
+  margin-bottom: 25px;
+  width: 45px;
+}
+/* Không hiển thị mục chứng chỉ màn hình trung bình và nhỏ */
+
+.cc-tablet {
+  display: none;
+}
+.cc-mobile {
+  display: none;
+}
+/* Thiết lập mục chứng chỉ màn hình lớn */
+/* Tạo lưới grid */
+#cc-laptop {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 2fr auto 2fr;
+  align-items: center;
+  padding: 30px 50px;
+  row-gap: 20px;
+  column-gap: 10px;
+}
+#cert1-laptop {
+  grid-column: 1 / span 4;
+  padding-left: 60px;
+}
+#cert2-laptop {
+  padding-left: 60px;
+  align-self: start;
+}
+#cert3-laptop {
+  align-self: start;
+}
+
+#cert4-laptop {
+  align-self: start;
+  border-left: 0.5px solid #d6c08d;
+}
+#cert5-laptop {
+  align-self: start;
+}
+#cert6-laptop {
+  grid-column: 1 / span 4;
+  border-top: 0.5px solid #d6c08d;
+  height: 10px;
+}
+#cert7-laptop {
+  padding-left: 60px;
+  align-self: start;
+}
+#cert8-laptop {
+  align-self: start;
+}
+/* Ẩn các ô <div> dự án cho website tablet, mobile */
+
+.project-tablet {
+  display: none;
+}
+.project-mobile {
+  display: none;
+}
+
+/* Thiết lập section dự án website laptop */
+
+.duan-laptop {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 20px 60px;
+  row-gap: 20px;
+  column-gap: 60px;
+}
+
+.da-1-laptop {
+  padding: 60px;
+  align-self: center;
+}
+
+.da-laptop {
+  border: 0.5px solid grey;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-rows: max-content;
+  align-items: center;
+}
+.da-2-laptop {
+  grid-column: 1 / span 3;
+}
+
+.da-3-laptop {
+  grid-column: 1 / span 3;
+  align-self: start;
+  border-bottom: 0.5px solid grey;
+  background-color: rgb(225, 216, 216);
+  padding: 10px 20px;
+}
+.da-4-laptop {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.da-4border-laptop {
+  display: grid;
+  width: 70px;
+  height: 30px;
+  border-radius: 25%;
+  border: 0.5px solid blue;
+  place-items: center;
+  background-color: rgb(197, 230, 203);
+}
+.da-5-laptop {
+  padding: 10px;
+}
+.da-6-laptop {
+  padding: 10px;
+}
+.da-border-1-laptop {
+  grid-column: 1 / span 3;
+  border-bottom: 0.5px solid grey;
+}
+.da-7-laptop {
+  grid-column: 1;
+  padding: 10px;
+}
+.da-8-laptop {
+  grid-column: 2 / span 2;
+  padding: 10px;
+}
+.da-border-2-laptop {
+  grid-column: 1 / span 3;
+  border-bottom: 0.5px solid grey;
+}
+.da-9-laptop {
+  padding: 10px;
+}
+.da-10-laptop {
+  padding: 10px;
+  grid-column: 2 / span 2;
+}
+.da-border-3-laptop {
+  grid-column: 1 / span 3;
+  border-bottom: 0.5px solid grey;
+}
+.da-11-laptop {
+  padding: 10px;
+}
+.da-12-laptop {
+  padding: 10px;
+  grid-column: 2 / span 2;
+}
+/* Nút bấm đến website dự án chi tiết */
+.da-more {
+  display: flex;
+  justify-content: center;
+}
+.da-more .btn {
+  background-color: #28a745;
+  color: white;
+  border-radius: 5px;
+  font-size: 16px;
+}
+/* Không hiển thị mục social màn hình lớn */
+.social-mobile {
+  display: none;
+}
+/* Thiết lập cho mục social, sử dụng flex */
+.social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+  padding: 30px 60px;
+  font-size: 18px;
+  color: grey;
+  width: 100%;
+}
